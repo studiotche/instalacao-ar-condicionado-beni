@@ -63,11 +63,11 @@
   --font-main: var(--font-sans);
   --font-body: var(--font-sans);
 
-  --color-primary: #0076E7;
-  --color-primary-hover: #005bb5;
-  --color-primary-text: #0C3B78;
-  --color-secondary: #0C3B78;
-  --color-secondary-hover: #082d5c;
+  --color-primary: #C0E6FF;
+  --color-primary-hover: #9AD3FF;
+  --color-primary-text: #5F97CB;
+  --color-secondary: #5F97CB;
+  --color-secondary-hover: #497DB0;
   --color-accent: #25D366;
   --color-dark: #0C111A;
   --color-white: #FFFFFF;
@@ -398,10 +398,10 @@ body {
 }
 
 .header-nav-link:hover {
-  color: #0C3B78 !important;
+  color: #5F97CB !important;
 }
 
-/* 5. Padronização de Botões (Azul #0C3B78 & Fundo Branco no Menu - Inter 400) */
+/* 5. Padronização de Botões (Azul #5F97CB & Fundo Branco no Menu - Inter 400) */
 .header-cta-btn {
   display: inline-flex !important;
   align-items: center !important;
@@ -410,13 +410,13 @@ body {
   height: 42px !important;
   padding: 0 20px !important;
   border-radius: 8px !important;
-  background: #0C3B78 !important;
+  background: #5F97CB !important;
   color: #FFFFFF !important;
   font-family: var(--font-sans) !important;
   font-weight: 400 !important;
   font-size: 13.5px !important;
   white-space: nowrap !important;
-  border: 1px solid #0C3B78 !important;
+  border: 1px solid #5F97CB !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   cursor: pointer !important;
@@ -432,7 +432,7 @@ body {
 }
 
 .header-cta-btn:hover {
-  background: #082D5C !important;
+  background: #497DB0 !important;
   color: #FFFFFF !important;
   transform: translateY(-1.5px) !important;
   box-shadow: 0 4px 14px rgba(12, 59, 120, 0.25) !important;
@@ -449,14 +449,14 @@ body {
   gap: 10px !important;
   height: 50px !important;
   padding: 0 1.625rem !important;
-  background-color: #0C3B78 !important;
+  background-color: #5F97CB !important;
   color: #FFFFFF !important;
   font-family: var(--font-sans) !important;
   font-size: 0.9375rem !important;
   font-weight: 400 !important;
   white-space: nowrap !important;
   border-radius: 9px !important;
-  border: 1px solid #0C3B78 !important;
+  border: 1px solid #5F97CB !important;
   box-shadow: 0 2px 8px rgba(12, 59, 120, 0.25) !important;
   transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.24s ease, box-shadow 0.24s ease !important;
   cursor: pointer !important;
@@ -471,8 +471,8 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #082D5C !important;
-  border-color: #082D5C !important;
+  background-color: #497DB0 !important;
+  border-color: #497DB0 !important;
   transform: translateY(-1.5px) !important;
   box-shadow: 0 6px 18px rgba(12, 59, 120, 0.35) !important;
 }
@@ -494,7 +494,7 @@ body {
   height: 50px !important;
   padding: 0 1.5rem !important;
   background-color: #FFFFFF !important;
-  color: #0C3B78 !important;
+  color: #5F97CB !important;
   font-family: var(--font-sans) !important;
   font-size: 0.9375rem !important;
   font-weight: 400 !important;
@@ -510,7 +510,7 @@ body {
 .btn-secondary:hover {
   background-color: #F8FAFC !important;
   border-color: #94A3B8 !important;
-  color: #082D5C !important;
+  color: #497DB0 !important;
   transform: translateY(-1px) !important;
 }
 
@@ -1189,7 +1189,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #0C3B78 !important;
+  background-color: #5F97CB !important;
   /* mobile-drawer-blue */
 }
 
@@ -1709,7 +1709,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-primary-text);
-  /* #0C3B78 */
+  /* #5F97CB */
   display: block;
   margin-bottom: 0.75rem;
   /* mb-3 */
@@ -1843,7 +1843,7 @@ body {
   padding: 0.625rem 0.75rem;
   /* py-2.5 px-3 */
   color: var(--color-primary-text);
-  /* text-[#0C3B78] */
+  /* text-[#5F97CB] */
   font-family: var(--font-sans) !important;
   font-weight: 400 !important;
   font-size: 15px;
@@ -1853,7 +1853,7 @@ body {
 
 .hero-btn-secondary:hover {
   color: var(--color-secondary-hover);
-  /* hover:text-[#082d5c] */
+  /* hover:text-[#497DB0] */
 }
 
 .hero-btn-icon-secondary {
@@ -1903,7 +1903,7 @@ body {
   height: 0.875rem;
   /* h-3.5 */
   color: var(--color-primary-text);
-  /* text-[#0C3B78] */
+  /* text-[#5F97CB] */
   flex-shrink: 0;
 }
 
@@ -3096,7 +3096,7 @@ body {
   left: 0;
   height: 1px;
   background-color: var(--color-primary);
-  /* bg-[#0C3B78] */
+  /* bg-[#5F97CB] */
   width: 0;
   transition: width 350ms ease-out;
   z-index: 10;
