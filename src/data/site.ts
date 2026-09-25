@@ -81,10 +81,10 @@ export const siteData = {
     state: "RS",
     locationString: "Ivoti — Rio Grande do Sul",
     regionCovered: "Ivoti e região",
-    phone: "051996684483",
-    phoneRaw: "5551996684483",
-    whatsapp: "051996684483",
-    whatsappRaw: "5551996684483",
+    phone: "05193482670",
+    phoneRaw: "555193482670",
+    whatsapp: "05193482670",
+    whatsappRaw: "555193482670",
     email: "contato@beniclimatizacao.com.br",
     instagram: "@beniclimatizacao",
     instagramUrl: "https://www.instagram.com/beniclimatizacao/",
@@ -455,7 +455,7 @@ export const siteData = {
     },
     {
       question: "Como funciona o agendamento de orçamento?",
-      answer: "Basta clicar em qualquer botão de WhatsApp na página ou ligar para (51) 99668-4483. Nos diga qual serviço precisa (instalação, manutenção, conserto ou limpeza) e agendaremos uma visita técnica com nossos especialistas.",
+      answer: "Basta clicar em qualquer botão de WhatsApp na página ou ligar para (51) 9348-2670. Nos diga qual serviço precisa (instalação, manutenção, conserto ou limpeza) e agendaremos uma visita técnica com nossos especialistas.",
     },
   ] as const satisfies readonly FaqItem[],
   finalCta: {
