@@ -109,7 +109,7 @@ export const siteData = {
   seo: {
     title: "Beni Climatização | Ar-Condicionado Residencial e Comercial em Ivoti/RS",
     description: "Beni Climatização: Empresa de ar-condicionado em Ivoti com técnicos qualificados. Instalação, manutenção, conserto, PMOC, VRF/VRV, câmara fria e rapel.",
-    canonicalUrl: "https://beniclimatizacao.com.br/",
+    canonicalUrl: "https://studiotche.github.io/instalacao-ar-condicionado-beni-climatizacao/",
     ogImage: "/assets/images/og-beni-climatizacao.jpg",
     keywords: "ar-condicionado Ivoti, instalação de ar-condicionado em Ivoti, manutenção de ar-condicionado Ivoti, higienização de ar-condicionado, PMOC Ivoti, VRF, VRV, câmara fria, rapel, Beni Climatização",
   },
