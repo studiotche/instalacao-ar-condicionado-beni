@@ -363,6 +363,33 @@ const initScrollSpy = (): void => {
   sections.forEach((sec) => observer.observe(sec));
 };
 
+const initFloatingWhatsApp = (): void => {
+  const whatsappBtn = document.querySelector<HTMLElement>(".floating-whatsapp");
+  const secondSection = document.getElementById("servicos"); // The second section of the site
+  if (!whatsappBtn || !secondSection) return;
+
+  const mobileQuery = window.matchMedia("(max-width: 760px)");
+
+  const handleVisibility = () => {
+    if (!mobileQuery.matches) {
+      whatsappBtn.classList.add("is-visible");
+      return;
+    }
+
+    const rect = secondSection.getBoundingClientRect();
+    // If the top of the second section is above or equal to the window height, it means we scrolled to it.
+    if (rect.top <= window.innerHeight) {
+      whatsappBtn.classList.add("is-visible");
+    } else {
+      whatsappBtn.classList.remove("is-visible");
+    }
+  };
+
+  window.addEventListener("scroll", handleVisibility, { passive: true });
+  mobileQuery.addEventListener("change", handleVisibility);
+  handleVisibility();
+};
+
 const initApp = (): void => {
   initHeroReveal();
   initHeaderScroll();
@@ -372,6 +399,7 @@ const initApp = (): void => {
   initServiceHover();
   initScrollReveal();
   initScrollSpy();
+  initFloatingWhatsApp();
 };
 
 if (document.readyState === "loading") {
