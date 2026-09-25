@@ -418,7 +418,7 @@ body {
   white-space: nowrap !important;
   border: 1px solid #5F97CB !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   cursor: pointer !important;
   text-decoration: none !important;
 }
@@ -1184,7 +1184,7 @@ body {
   box-shadow: var(--shadow-lg);
   transform: translateX(100%);
   visibility: hidden;
-  transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1), visibility 0s 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1209,6 +1209,7 @@ body {
 .mobile-drawer.is-open {
   transform: translateX(0);
   visibility: visible;
+  transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1), visibility 0s;
 }
 
 .mobile-backdrop.is-open {
