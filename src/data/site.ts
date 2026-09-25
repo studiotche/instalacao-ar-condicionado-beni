@@ -130,13 +130,13 @@ export const siteData = {
     primaryCta: "Solicitar orçamento",
     secondaryCta: "Conheça nossos serviços",
     image: {
-      url: "/assets/images/instalador-ar-condicionado-am-climatizar.webp",
+      url: "/assets/images/instalador-ar-condicionado-beni.webp",
       alt: "Instalador profissional de ar-condicionado da Beni Climatização realizando serviço técnico",
       width: 1924,
       height: 994,
     },
     imageMobile: {
-      url: "/assets/images/instalador-ar-condicionado-am-climatizar-m.webp",
+      url: "/assets/images/instalador-ar-condicionado-beni-m.webp",
       alt: "Instalador profissional de ar-condicionado da Beni Climatização em atendimento técnico",
       width: 779,
       height: 813,

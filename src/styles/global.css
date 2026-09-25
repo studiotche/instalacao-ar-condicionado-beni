@@ -315,14 +315,14 @@ h6 {
 .site-header,
 .header-fixed,
 .header-blue {
-  background-color: rgba(6, 13, 40, 0.96) !important;
+  background-color: rgba(255, 255, 255, 0.96) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   will-change: transform;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
 }
 
 body {
@@ -389,7 +389,7 @@ body {
 .header-nav-link {
   font-size: 14.5px !important;
   font-weight: 400 !important;
-  color: #E2E8F0 !important;
+  color: #0F141C !important;
   transition: all 0.2s ease !important;
   text-decoration: none !important;
   white-space: nowrap !important;
@@ -398,7 +398,7 @@ body {
 }
 
 .header-nav-link:hover {
-  color: #00B4FF !important;
+  color: #0C3B78 !important;
 }
 
 /* 5. Padronização de Botões (Azul #0C3B78 & Fundo Branco no Menu - Inter 400) */
@@ -410,13 +410,13 @@ body {
   height: 42px !important;
   padding: 0 20px !important;
   border-radius: 8px !important;
-  background: #FFFFFF !important;
-  color: #0C3B78 !important;
+  background: #0C3B78 !important;
+  color: #FFFFFF !important;
   font-family: var(--font-sans) !important;
   font-weight: 400 !important;
   font-size: 13.5px !important;
   white-space: nowrap !important;
-  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid #0C3B78 !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   cursor: pointer !important;
@@ -427,15 +427,15 @@ body {
   width: 20px !important;
   height: 20px !important;
   flex-shrink: 0 !important;
-  color: #0C3B78 !important;
+  color: #FFFFFF !important;
   transition: transform 0.2s ease !important;
 }
 
 .header-cta-btn:hover {
-  background: #F1F5F9 !important;
-  color: #082D5C !important;
+  background: #082D5C !important;
+  color: #FFFFFF !important;
   transform: translateY(-1.5px) !important;
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 14px rgba(12, 59, 120, 0.25) !important;
 }
 
 .header-cta-btn:hover svg {
