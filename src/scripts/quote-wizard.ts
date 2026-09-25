@@ -1,4 +1,4 @@
-import { siteData, buildWhatsAppUrl, getLeadTag } from "../data/site";
+import { siteData, buildWhatsAppUrl } from "../data/site";
 
 interface WizardState {
   service: string;
@@ -221,10 +221,9 @@ export const initQuoteWizard = (): void => {
   };
 
   const buildMessage = (): string => {
-    const tag = getLeadTag(state.urgency || "");
     const detailLine = [state.detail1, state.detail2].filter(Boolean).join(" • ");
     return [
-      `*NOVO LEAD SITE ${tag}* — ${siteData.company.name}`,
+      `*Solicitação de Orçamento* — ${siteData.company.name}`,
       "",
       `*Serviço:* ${state.service}`,
       `*Imóvel:* ${state.property}`,
