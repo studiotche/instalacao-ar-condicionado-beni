@@ -136,9 +136,13 @@ export const initQuoteWizard = (): void => {
     if (progressFill) progressFill.style.width = `${percent}%`;
     if (stepLabel) stepLabel.textContent = `Etapa ${current} de ${TOTAL_STEPS}`;
     if (percentLabel) percentLabel.textContent = `${percent}%`;
+    const nav = modal.querySelector<HTMLElement>(".wizard-nav");
+    if (nav) {
+      if (current === TOTAL_STEPS) nav.setAttribute("hidden", "");
+      else nav.removeAttribute("hidden");
+    }
     if (backButton) backButton.hidden = current === 1;
     if (nextButton) {
-      nextButton.hidden = current === TOTAL_STEPS;
       nextButton.textContent = current === 6 ? "Revisar →" : "Continuar →";
     }
     if (current === 3) syncConditional();
@@ -329,15 +333,8 @@ export const initQuoteWizard = (): void => {
     closeModal();
   });
 
-  document.getElementById("wizard-copy")?.addEventListener("click", async (event) => {
-    const btn = event.currentTarget as HTMLButtonElement;
-    try {
-      await navigator.clipboard.writeText(buildMessage());
-      btn.textContent = "Copiado!";
-      window.setTimeout(() => (btn.textContent = "Copiar resumo"), 2000);
-    } catch {
-      showError("Não foi possível copiar. Selecione o texto do resumo manualmente.");
-    }
+  document.getElementById("wizard-review-back")?.addEventListener("click", () => {
+    goTo(current - 1);
   });
 
   goTo(1);

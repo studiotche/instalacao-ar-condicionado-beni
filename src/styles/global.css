@@ -5721,6 +5721,14 @@ body {
   border-top: 1px solid #f1f5f9;
 }
 
+.wizard-nav[hidden] {
+  display: none;
+}
+
+.wizard-next-btn[hidden] {
+  display: none !important;
+}
+
 .wizard-back-btn {
   background: none;
   border: none;
