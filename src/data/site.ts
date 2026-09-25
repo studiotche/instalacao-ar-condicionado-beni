@@ -471,3 +471,78 @@ export const siteData = {
 export const buildWhatsAppUrl = (message: string): string => {
   return `https://wa.me/${siteData.company.whatsappRaw}?text=${encodeURIComponent(message)}`;
 };
+
+export interface QuoteOption {
+  readonly value: string;
+  readonly label: string;
+  readonly hint?: string;
+}
+
+export const quoteFunnel = {
+  services: [
+    { value: "Instalação de ar-condicionado", label: "Instalação", hint: "Split • Multi • Rapel" },
+    { value: "Higienização e limpeza", label: "Higienização", hint: "Saúde • Odores" },
+    { value: "Manutenção e conserto", label: "Manutenção", hint: "Não gela • Defeito" },
+    { value: "PMOC", label: "PMOC", hint: "Empresas • Lei" },
+    { value: "VRF / VRV", label: "VRF / VRV", hint: "Central • Edifícios" },
+    { value: "Câmara fria", label: "Câmara fria", hint: "Refrigeração" },
+  ] as const satisfies readonly QuoteOption[],
+  propertyTypes: [
+    { value: "Casa", label: "Casa" },
+    { value: "Apartamento", label: "Apartamento" },
+    { value: "Comércio / Empresa", label: "Comércio" },
+    { value: "Indústria", label: "Indústria" },
+  ] as const satisfies readonly QuoteOption[],
+  installOwnership: [
+    { value: "Já tenho Split", label: "Já tenho Split" },
+    { value: "Já tenho Janela", label: "Já tenho Janela" },
+    { value: "Não tenho — preciso de indicação", label: "Não tenho" },
+  ] as const satisfies readonly QuoteOption[],
+  roomCounts: [
+    { value: "1 ambiente", label: "1 ambiente" },
+    { value: "2 a 3 ambientes", label: "2 a 3" },
+    { value: "4 ou mais ambientes", label: "4+" },
+  ] as const satisfies readonly QuoteOption[],
+  maintenanceIssues: [
+    { value: "Não gela / gelando pouco", label: "Não gela" },
+    { value: "Pingando / vazando água", label: "Pingando" },
+    { value: "Barulho / mau cheiro", label: "Barulho / cheiro" },
+    { value: "Não liga", label: "Não liga" },
+    { value: "Outro defeito", label: "Outro" },
+  ] as const satisfies readonly QuoteOption[],
+  hygieneCounts: [
+    { value: "1 aparelho", label: "1 aparelho" },
+    { value: "2 a 3 aparelhos", label: "2 a 3" },
+    { value: "4 ou mais aparelhos", label: "4+" },
+  ] as const satisfies readonly QuoteOption[],
+  lastCleaning: [
+    { value: "Nunca foi limpo", label: "Nunca" },
+    { value: "Há mais de 1 ano", label: "+1 ano" },
+    { value: "Há menos de 1 ano", label: "<1 ano" },
+  ] as const satisfies readonly QuoteOption[],
+  commercialSizes: [
+    { value: "Pequeno comércio", label: "Peq. comércio" },
+    { value: "Edifício / escritório", label: "Edifício" },
+    { value: "Indústria / grande porte", label: "Indústria" },
+  ] as const satisfies readonly QuoteOption[],
+  urgencies: [
+    { value: "Preciso essa semana", label: "Essa semana", hint: "Prioritário" },
+    { value: "Próximos 15 dias", label: "15 dias", hint: "Em breve" },
+    { value: "Só pesquisando preço", label: "Pesquisando", hint: "Orçamento" },
+  ] as const satisfies readonly QuoteOption[],
+  cities: [
+    "Ivoti",
+    "Dois Irmãos",
+    "Estância Velha",
+    "Novo Hamburgo",
+    "Lindolfo Collor",
+    "Presidente Lucena",
+    "Outra cidade",
+  ] as const,
+} as const;
+
+export const getLeadTag = (urgency: string): string => {
+  if (urgency.includes("semana")) return "[QUENTE]";
+  if (urgency.includes("15 dias")) return "[MORNO]";
+  return "[PESQUISA]";
+};

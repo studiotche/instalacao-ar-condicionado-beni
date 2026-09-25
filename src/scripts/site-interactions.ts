@@ -1,5 +1,3 @@
-const WHATSAPP_NUMBER = "5551997736690";
-
 const initHeroReveal = (): void => {
   const heroCopy = document.querySelector<HTMLElement>(".hero-copy-container");
   if (!heroCopy) return;
@@ -285,64 +283,9 @@ const initFaqAccordion = (): void => {
   });
 };
 
-const initQuoteModal = (): void => {
-  const modal = document.getElementById("quote-modal");
-  const backdrop = document.getElementById("quote-modal-backdrop");
-  const openButtons = document.querySelectorAll("[data-open-quote]");
-  const closeButton = document.getElementById("close-quote-modal");
-  const form = document.getElementById("quote-form") as HTMLFormElement | null;
-
-  if (!modal || !backdrop) return;
-
-  const openModal = (): void => {
-    modal.classList.add("is-open");
-    backdrop.classList.add("is-open");
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = (): void => {
-    modal.classList.remove("is-open");
-    backdrop.classList.remove("is-open");
-    document.body.style.overflow = "";
-  };
-
-  openButtons.forEach((btn) => {
-    btn.addEventListener("click", openModal);
-  });
-
-  closeButton?.addEventListener("click", closeModal);
-  backdrop.addEventListener("click", closeModal);
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && modal.classList.contains("is-open")) {
-      closeModal();
-    }
-  });
-
-  form?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const formData = new FormData(form);
-    const service = (formData.get("service") as string) || "Instalação";
-    const property = (formData.get("property") as string) || "Residencial";
-    const city = (formData.get("city") as string) || "Ivoti — Rio Grande do Sul";
-    const details = (formData.get("details") as string) || "";
-
-    const message = [
-      "Olá, Beni Climatização! Gostaria de solicitar um orçamento:",
-      "",
-      `*Serviço:* ${service}`,
-      `*Tipo de Imóvel:* ${property}`,
-      `*Localização:* ${city}`,
-      details ? `*Observação:* ${details}` : "",
-      "",
-      "Poderiam me informar disponibilidade e proposta?",
-    ].filter(Boolean).join("\n");
-
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    closeModal();
-  });
-};
+// Wizard de orçamento vive em quote-wizard.ts (single owner do #quote-modal).
+// Mantido como no-op para compatibilidade de chamadas antigas.
+const initQuoteModal = (): void => {};
 
 const initServiceHover = (): void => {
   const serviceItems = document.querySelectorAll(".service-item");

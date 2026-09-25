@@ -1,4 +1,4 @@
-name: Deploy AM Climatizar to GitHub Pages
+name: Deploy Beni Climatizacao to GitHub Pages
 
 on:
   push:
