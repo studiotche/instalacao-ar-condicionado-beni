@@ -122,7 +122,7 @@ export const siteData = {
     { label: "Contato", href: "#contato" },
   ] as const satisfies readonly NavItem[],
   hero: {
-    eyebrow: "REFRIGERAÇÃO E CLIMATIZAÇÃO PROFISSIONAL • IVOTI/RS",
+    eyebrow: "REFRIGERAÇÃO E CLIMATIZAÇÃO PROFISSIONAL",
     headlinePart1: "Instalação, manutenção",
     headlinePart2: "e revisão de ar-condicionado em Ivoti com a",
     headlineHighlight: "Beni Climatização.",

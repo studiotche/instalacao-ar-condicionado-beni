@@ -1727,9 +1727,9 @@ body {
   margin-bottom: 1rem;
   /* mb-4 */
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.75rem;
   /* fallback */
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 700;
   color: #0f172a;
   /* text-slate-900 */
