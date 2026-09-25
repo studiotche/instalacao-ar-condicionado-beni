@@ -328,7 +328,7 @@ const initQuoteModal = (): void => {
     const details = (formData.get("details") as string) || "";
 
     const message = [
-      "Olá, AM Climatizar! Gostaria de solicitar um orçamento:",
+      "Olá, Beni Climatização! Gostaria de solicitar um orçamento:",
       "",
       `*Serviço:* ${service}`,
       `*Tipo de Imóvel:* ${property}`,

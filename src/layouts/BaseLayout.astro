@@ -23,9 +23,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "HVACBusiness",
-      "@id": "https://studiotche.github.io/Instalacao-ar-condicionado-am-climatizar/#business",
-      "name": "AM Climatizar",
-      "legalName": "AM Climatizar — Climatização e Elétrica Residencial",
+      "@id": "https://beniclimatizacao.com.br/#business",
+      "name": "Beni Climatização",
+      "legalName": "Beni Climatização Ltda",
       "url": siteData.seo.canonicalUrl,
       "logo": asset(siteData.seo.ogImage),
       "image": asset(siteData.hero.image.url),
@@ -68,7 +68,7 @@ const jsonLd = {
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Serviços de Climatização e Elétrica AM Climatizar",
+        "name": "Serviços de Climatização Beni Climatização",
         "itemListElement": [
           {
             "@type": "Offer",
@@ -107,7 +107,7 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://studiotche.github.io/Instalacao-ar-condicionado-am-climatizar/#faq",
+      "@id": "https://beniclimatizacao.com.br/#faq",
       "mainEntity": siteData.faq.map((item) => ({
         "@type": "Question",
         "name": item.question,
@@ -130,14 +130,14 @@ const jsonLd = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={siteData.seo.keywords} />
-    <meta name="author" content="AM Climatizar" />
+    <meta name="author" content="Beni Climatização" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href={siteData.seo.canonicalUrl} />
     <meta name="geo.region" content="BR-RS" />
     <meta name="geo.placename" content="Ivoti" />
 
     <!-- OpenGraph / Social Meta -->
-    <meta property="og:site_name" content="AM Climatizar" />
+    <meta property="og:site_name" content="Beni Climatização" />
     <meta property="og:type" content="business.business" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -151,7 +151,7 @@ const jsonLd = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={asset(siteData.seo.ogImage)} />
 
-    <!-- Favicon Oficial AM Climatizar -->
+    <!-- Favicon Oficial Beni Climatização -->
     <link rel="icon" type="image/webp" href={asset("/assets/images/favicon.webp")} />
     <link rel="apple-touch-icon" sizes="180x180" href={asset("/apple-touch-icon.png")} />
 

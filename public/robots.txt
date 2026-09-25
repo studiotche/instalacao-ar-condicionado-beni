@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://studiotche.github.io/Instalacao-ar-condicionado-am-climatizar/sitemap-index.xml
+Sitemap: https://beniclimatizacao.com.br/sitemap-index.xml
